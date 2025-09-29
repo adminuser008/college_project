@@ -216,6 +216,9 @@
         .dark .ghost { border-color: #f9fafb; }
 
         @media (max-width: 767px) {
+            #auth-container {
+                justify-content: flex-start; /* Align to start instead of center */
+            }
             .auth-main-container {
                 width: 100%;
                 max-width: 100vw;
@@ -235,7 +238,7 @@
                 min-height: 100vh;
                 transform: none !important;
                 opacity: 1 !important;
-                padding: 40px;
+                padding: 40px 24px; /* Better mobile padding */
                 box-sizing: border-box;
                 justify-content: center;
                 display: none; /* Hide both by default on mobile */
@@ -251,7 +254,7 @@
                 animation: none;
             }
             .auth-main-container form {
-                padding: 0 1.5rem;
+                padding: 0; /* Remove redundant padding */
             }
         }
 
@@ -1737,5 +1740,6 @@
     </script>
 </body>
 </html>
+
 
 
