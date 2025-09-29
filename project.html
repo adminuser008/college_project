@@ -250,6 +250,9 @@
                 display: flex;
                 animation: none;
             }
+            .auth-main-container form {
+                padding: 0 1.5rem;
+            }
         }
 
 
@@ -351,11 +354,17 @@
         }
         .auth-main-container input {
             background-color: #eee;
-            border: none;
+            border: 1px solid #eee;
             padding: 12px 15px;
             margin: 8px 0;
             width: 100%;
             border-radius: 8px;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .auth-main-container input:focus {
+            border-color: #FF4B2B;
+            box-shadow: 0 0 0 3px rgba(255, 75, 43, 0.2);
         }
         .auth-main-container button {
             border-radius: 20px;
@@ -404,7 +413,7 @@
                     <input type="email" id="signup-email" placeholder="Email" required />
                     <input type="password" id="signup-password" placeholder="Password" required />
                     <button class="mt-2">Sign Up</button>
-                    <p id="signup-error" class="text-red-500 text-sm mt-2"></p>
+                    <p id="signup-error" class="text-red-500 text-sm mt-3"></p>
                     <a href="#" class="md:hidden mt-4 text-sm" id="mobile-show-signin">Already have an account? Sign In</a>
                 </form>
             </div>
@@ -421,7 +430,7 @@
                     <input type="password" id="signin-password" placeholder="Password" required/>
                     <a href="#" class="text-sm my-2">Forgot your password?</a>
                     <button>Sign In</button>
-                    <p id="signin-error" class="text-red-500 text-sm mt-2"></p>
+                    <p id="signin-error" class="text-red-500 text-sm mt-3"></p>
                     <a href="#" class="md:hidden mt-4 text-sm" id="mobile-show-signup">Don't have an account? Sign up</a>
                 </form>
             </div>
@@ -1728,4 +1737,5 @@
     </script>
 </body>
 </html>
+
 
